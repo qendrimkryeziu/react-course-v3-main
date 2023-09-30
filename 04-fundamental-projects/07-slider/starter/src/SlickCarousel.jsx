@@ -19,6 +19,8 @@ const SlickCarousel = () => {
   };
 
   // Slider Carousel
+  // And css for working slider carousel
+
   return (
     <section className="slick-container">
       <Slider {...settings}>
