@@ -1,14 +1,14 @@
-// import Starter from "./tutorial/02-useEffect/starter/05-cleanup-function";
+import Starter from "./tutorial/06-forms/starter/02-user-challenge";
 
-import List from "./tutorial/05-leverage-javascript/starter/List.jsx";
+// import List from "./tutorial/05-leverage-javascript/starter/List.jsx";
 
 function App() {
   return (
     <div className="container">
       {/* <h2>Advanced React</h2> */}
-      {/* <Starter /> */}
+      <Starter />
       {/* <Example /> */}
-      <List />
+      {/* <List /> */}
     </div>
   );
 }
