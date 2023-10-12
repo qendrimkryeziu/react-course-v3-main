@@ -1,39 +1,21 @@
-import { useState } from "react";
 import { FormInput, SubmitBtn } from "../components";
 import { Form, Link } from "react-router-dom";
 
 const Login = () => {
-  const [data, setData] = useState({
-    email: "",
-    password: "",
-  });
-  const onSUbmitButton = (e) => {
-    e.preventDefault();
-    console.log(data);
-  };
   return (
     <section className="h-screen grid place-items-center">
-      <form
-        onSubmit={onSUbmitButton}
-        className="card w-96 p-8 bg-base-100 shadow-lg flex flex-col gap-y-4"
-      >
+      <Form className="card w-96 p-8 bg-base-100 shadow-lg flex flex-col gap-y-4">
         <h4 className="text-center text-3xl font-bold">Login</h4>
-        <input
+        <FormInput
           type="text"
           label="email"
           name="identifier"
-          onChange={(e) =>
-            setData({ [e.target.name]: e.target.value, ...data })
-          }
-          value={data.email}
+          defaultValue="test@test.com"
         />
-        <input
+        <FormInput
           type="password"
           label="password"
           name="password"
-          onChange={(e) =>
-            setData({ [e.target.name]: e.target.value, ...data })
-          }
           defaultValue="secret"
         />
         <div className="mt-4">
@@ -51,7 +33,7 @@ const Login = () => {
             register
           </Link>
         </p>
-      </form>
+      </Form>
     </section>
   );
 };
